@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Seguro Empresarial</title>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Seguro Empresarial</h1>
+
+    <form id="formSeguro">
+
+      <!-- Dados do Segurado -->
+      <h2>Dados do Segurado</h2>
+      <div class="linha">
+        <div class="campo">
+          <label for="nome">Nome Segurado</label>
+          <input type="text" id="nome">
+          <span class="erro" id="erroNome"></span>
+        </div>
+        <div class="campo">
+          <label for="cpf">CPF</label>
+          <input type="text" id="cpf" maxlength="14">
+          <span class="erro" id="erroCpf"></span>
+        </div>
+      </div>
+
+      <!-- Vigência -->
+      <h2>Vigência</h2>
+      <div class="linha">
+        <div class="campo">
+          <label for="inicio">Início de Vigência</label>
+          <input type="date" id="inicio">
+          <span class="erro" id="erroInicio"></span>
+        </div>
+        <div class="campo">
+          <label for="fim">Fim de Vigência</label>
+          <input type="date" id="fim">
+          <span class="erro" id="erroFim"></span>
+        </div>
+        <div class="campo">
+          <label for="dias">Dias de Vigência</label>
+          <input type="number" id="dias" readonly>
+          <span class="erro" id="erroDias"></span>
+        </div>
+      </div>
+
+      <!-- Endereço -->
+      <h2>Endereço</h2>
+      <div class="linha">
+        <div class="campo">
+          <label for="cep">CEP</label>
+          <input type="text" id="cep" maxlength="9">
+          <span class="erro" id="erroCep"></span>
+        </div>
+        <div class="campo">
+          <label for="estado">Estado</label>
+          <input type="text" id="estado">
+          <span class="erro" id="erroEstado"></span>
+        </div>
+      </div>
+
+      <div class="linha">
+        <div class="campo">
+          <label for="cidade">Cidade</label>
+          <input type="text" id="cidade">
+          <span class="erro" id="erroCidade"></span>
+        </div>
+        <div class="campo">
+          <label for="logradouro">Logradouro (Av., Rua, etc.)</label>
+          <input type="text" id="logradouro">
+          <span class="erro" id="erroLogradouro"></span>
+        </div>
+      </div>
+
+      <div class="linha">
+        <div class="campo">
+          <label for="bairro">Bairro</label>
+          <input type="text" id="bairro">
+          <span class="erro" id="erroBairro"></span>
+        </div>
+        <div class="campo">
+          <label for="numero">Nº</label>
+          <input type="number" id="numero">
+          <span class="erro" id="erroNumero"></span>
+        </div>
+        <div class="campo">
+          <label for="complemento">Complemento</label>
+          <input type="text" id="complemento">
+          <span class="erro" id="erroComplemento"></span>
+        </div>
+      </div>
+
+      <!-- Cobertura -->
+      <h2>Cobertura</h2>
+      <div class="linha">
+        <div class="campo">
+          <label for="cobertura">Cobertura</label>
+          <select id="cobertura">
+            <option value="">Selecione...</option>
+            <option value="incendio">Incêndio</option>
+            <option value="furtos">Furtos</option>
+            <option value="danos">Danos elétricos</option>
+          </select>
+          <span class="erro" id="erroCobertura"></span>
+        </div>
+        <div class="campo">
+          <label for="premio">Valor de Prêmio (R$)</label>
+          <input type="number" id="premio" step="0.01">
+          <span class="erro" id="erroPremio"></span>
+        </div>
+      </div>
+
+      <button type="submit">Enviar Solicitação</button>
+
+    </form>
+  </div>
+<script src="app.js"></script>
+</body>
+</html>
